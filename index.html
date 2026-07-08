@@ -2,1441 +2,174 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-<meta name="description" content="دهکده سلامت - فروشگاه محصولات ارگانیک، سنتی و طبیعی ایرانی">
-<meta name="keywords" content="محصولات ارگانیک, عسل طبیعی, زعفران, خشکبار, عرقیات گیاهی">
-<meta name="theme-color" content="#5C7A3C">
-<title>دهکده سلامت | محصولات ارگانیک و سنتی</title>
-<link rel="preconnect" href="https://cdn.jsdelivr.net">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/css/vazirmatn@latest/index.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>صفحه در دسترس نیست</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap" rel="stylesheet">
+
 <style>
-  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  html,body{
-    overflow-x:hidden;
-    width:100%;
-    max-width:100vw;
-    position:relative;
-  }
-  :root{
-    --bg:#FAF7F2;
-    --bg-2:#FFFFFF;
-    --bg-3:#F5EFE6;
-    --green:#5C7A3C;
-    --green-dark:#4A5D23;
-    --green-light:#8BA85C;
-    --brown:#7B5438;
-    --dark:#2C1810;
-    --gold:#C7A96B;
-    --text:#2C1810;
-    --muted:rgba(44,24,16,.6);
-    --line:rgba(44,24,16,.1);
-    --shadow:0 8px 32px rgba(44,24,16,.12);
-    --shadow-hover:0 16px 48px rgba(44,24,16,.2);
-    --radius:16px;
-  }
-  [data-theme="dark"]{
-    --bg:#0F0A07;
-    --bg-2:#1A120E;
-    --bg-3:#1F1612;
-    --green:#8BA85C;
-    --green-dark:#5C7A3C;
-    --green-light:#A8C47A;
-    --brown:#D4B87A;
-    --dark:#FAF7F2;
-    --gold:#C7A96B;
-    --text:#FAF7F2;
-    --muted:rgba(250,247,242,.6);
-    --line:rgba(250,247,242,.1);
-    --shadow:0 8px 32px rgba(0,0,0,.4);
-    --shadow-hover:0 16px 48px rgba(0,0,0,.6);
-  }
-  html{scroll-behavior:smooth}
-  body{
-    font-family:'Vazirmatn',system-ui,sans-serif;
-    background:var(--bg);
-    color:var(--text);
-    line-height:1.7;
-    width:100%;
-    max-width:100vw;
-    transition:background .4s ease,color .4s ease;
-  }
-  body.menu-open{overflow:hidden}
-  img{max-width:100%;display:block}
-  a{color:inherit;text-decoration:none}
-  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
-  ::selection{background:var(--green);color:#fff}
 
-  /* Progress Bar */
-  .progress{
-    position:fixed;top:0;right:0;height:3px;width:0;
-    background:linear-gradient(90deg,var(--green),var(--gold));
-    z-index:1000;transition:width .15s ease;
-    box-shadow:0 0 12px var(--green);
-  }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Vazirmatn',sans-serif;
+}
 
-  /* Navbar */
-  .nav{
-    position:fixed;
-    top:20px;
-    left:50%;
-    transform:translateX(-50%);
-    width:calc(100% - 40px);
-    max-width:1280px;
-    z-index:100;
-    background:rgba(255,255,255,.85);
-    backdrop-filter:blur(20px) saturate(180%);
-    -webkit-backdrop-filter:blur(20px) saturate(180%);
-    border:1px solid rgba(255,255,255,.5);
-    border-radius:100px;
-    padding:12px 24px;
-    display:flex;align-items:center;justify-content:space-between;
-    gap:20px;
-    transition:all .3s ease;
-    box-shadow:0 4px 24px rgba(44,24,16,.08);
-  }
-  [data-theme="dark"] .nav{
-    background:rgba(26,18,14,.85);
-    border:1px solid rgba(255,255,255,.08);
-  }
-  .nav.scrolled{
-    top:12px;
-    padding:10px 20px;
-    box-shadow:0 8px 32px rgba(44,24,16,.15);
-  }
-  .logo{
-    display:flex;align-items:center;gap:12px;
-    flex-shrink:0;
-  }
-  .logo-img{
-    width:44px;height:44px;border-radius:50%;
-    object-fit:cover;
-    border:2px solid var(--green);
-    box-shadow:0 4px 12px rgba(92,122,60,.2);
-    transition:transform .3s;
-  }
-  .logo-img:hover{transform:scale(1.05)}
-  .logo-text{
-    font-size:18px;font-weight:500;
-    color:var(--dark);letter-spacing:.5px;
-  }
-  .nav-links{
-    display:flex;gap:28px;align-items:center;
-  }
-  .nav-links a{
-    font-size:14px;font-weight:400;color:var(--muted);
-    position:relative;transition:color .3s;white-space:nowrap;
-  }
-  .nav-links a:hover{color:var(--green)}
-  .nav-links a::after{
-    content:"";position:absolute;bottom:-6px;right:0;
-    width:0;height:2px;background:var(--green);
-    border-radius:2px;transition:width .3s;
-  }
-  .nav-links a:hover::after{width:100%}
-  .nav-actions{display:flex;gap:8px;align-items:center;flex-shrink:0}
-  .theme-toggle{
-    width:40px;height:40px;border-radius:50%;
-    background:var(--bg-2);
-    display:flex;align-items:center;justify-content:center;
-    transition:all .3s;border:1px solid var(--line);
-  }
-  .theme-toggle:hover{
-    background:var(--green);color:#fff;
-    transform:rotate(180deg);
-  }
-  .theme-toggle svg{width:18px;height:18px}
-  .menu-btn{
-    display:none;
-    width:40px;height:40px;border-radius:50%;
-    background:var(--bg-2);border:1px solid var(--line);
-    align-items:center;justify-content:center;
-    transition:all .3s;
-  }
-  .menu-btn:hover{background:var(--green);color:#fff}
-  .menu-btn span{
-    display:block;width:18px;height:2px;
-    background:currentColor;position:relative;transition:.3s;
-    border-radius:2px;
-  }
-  .menu-btn span::before,
-  .menu-btn span::after{
-    content:"";position:absolute;width:18px;height:2px;
-    background:currentColor;transition:.3s;border-radius:2px;
-  }
-  .menu-btn span::before{top:-6px}
-  .menu-btn span::after{top:6px}
-
-  /* Mobile Menu */
-  .mobile-menu{
-    position:fixed;
-    top:80px;
-    left:20px;
-    right:20px;
-    background:var(--bg-2);
-    border-radius:20px;
-    padding:20px;
-    box-shadow:var(--shadow);
-    border:1px solid var(--line);
-    visibility:hidden;
-    opacity:0;
-    transform:translateY(-20px);
-    transition:all .3s ease;
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-    z-index:99;
-    pointer-events:none;
-  }
-  .mobile-menu.active{
-    visibility:visible;
-    opacity:1;
-    transform:translateY(0);
-    pointer-events:auto;
-  }
-  .mobile-menu a{
-    font-size:15px;
-    color:var(--text);
-    padding:12px 16px;
-    border-radius:12px;
-    transition:all .3s;
-    text-align:center;
-  }
-  .mobile-menu a:hover{
-    background:var(--bg-3);
-    color:var(--green);
-  }
-
-  /* Hero */
-  .hero{
-    min-height:100vh;
-    width:100%;
-    position:relative;
-    display:flex;align-items:center;justify-content:center;
+body{
+    height:100vh;
     overflow:hidden;
-    padding:120px 24px 80px;
-    text-align:center;
-  }
-  .hero-bg{
-    position:absolute;inset:0;z-index:0;
-    background-image:url('back.png');
-    background-size:cover;
-    background-position:center;
-    transform:scale(1.15);
-    transition:transform .1s linear;
-  }
-  .hero-bg::after{
-    content:"";position:absolute;inset:0;
-    background:linear-gradient(135deg,rgba(44,24,16,.85) 0%,rgba(92,122,60,.7) 50%,rgba(44,24,16,.8) 100%);
-  }
-  .hero-content{
-    position:relative;z-index:2;
-    text-align:center;max-width:900px;color:#fff;
-    width:100%;
-    margin:0 auto;
-  }
-  .hero-tag{
-    display:inline-flex;align-items:center;gap:12px;
-    padding:10px 24px;border-radius:100px;
-    background:rgba(255,255,255,.15);
-    backdrop-filter:blur(20px);
-    border:1px solid rgba(255,255,255,.2);
-    font-size:13px;letter-spacing:2px;
-    margin-bottom:32px;color:#fff;
-    opacity:0;animation:fadeUp .8s .2s forwards;
-  }
-  .hero-tag::before{
-    content:"";width:8px;height:8px;border-radius:50%;
-    background:#fff;box-shadow:0 0 12px #fff;
-    animation:pulse 2s infinite;
-  }
-  @keyframes pulse{50%{opacity:.4}}
-  .hero h1{
-    font-size:clamp(40px,6vw,80px);
-    font-weight:300;line-height:1.2;
-    letter-spacing:-1px;
-    margin-bottom:28px;
-  }
-  .hero h1 .word{
-    display:inline-block;opacity:0;
-    transform:translateY(40px);
-    animation:fadeUp .8s forwards;
-  }
-  .hero h1 .word:nth-child(1){animation-delay:.4s}
-  .hero h1 .word:nth-child(2){animation-delay:.55s;color:var(--gold);font-weight:400}
-  .hero h1 .word:nth-child(3){animation-delay:.7s}
-  .hero h1 .word:nth-child(4){animation-delay:.85s}
-  @keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
-  .hero-sub{
-    font-size:clamp(15px,1.5vw,18px);
-    max-width:600px;margin:0 auto 40px;
-    opacity:0;animation:fadeUp .8s 1s forwards;
-    color:rgba(255,255,255,.9);line-height:2;
-    font-weight:300;
-  }
-  .hero-btns{
-    display:flex;gap:16px;justify-content:center;flex-wrap:wrap;
-    opacity:0;animation:fadeUp .8s 1.2s forwards;
-  }
-  .btn{
-    position:relative;overflow:hidden;
-    padding:16px 36px;border-radius:100px;
-    font-size:14px;font-weight:500;letter-spacing:.5px;
-    transition:all .4s cubic-bezier(.4,0,.2,1);
-    display:inline-flex;align-items:center;gap:10px;
-  }
-  .btn-primary{
-    background:#fff;color:var(--green-dark);
-    box-shadow:0 8px 32px rgba(255,255,255,.3);
-  }
-  .btn-primary:hover{
-    background:var(--gold);color:#fff;
-    transform:translateY(-3px);
-    box-shadow:0 12px 40px rgba(199,169,107,.4);
-  }
-  .btn-ghost{
-    background:transparent;color:#fff;
-    border:2px solid rgba(255,255,255,.3);
-  }
-  .btn-ghost:hover{
-    background:rgba(255,255,255,.15);
-    border-color:#fff;
-  }
-  .btn .ripple{
-    position:absolute;border-radius:50%;
-    background:rgba(255,255,255,.4);
-    transform:scale(0);animation:ripple .6s ease-out;
-    pointer-events:none;
-  }
-  @keyframes ripple{to{transform:scale(4);opacity:0}}
-  .btn svg{width:16px;height:16px;transition:transform .3s}
-  .btn:hover svg{transform:translateX(-4px)}
-
-  .hero-scroll{
-    position:absolute;bottom:32px;left:50%;transform:translateX(-50%);
-    color:rgba(255,255,255,.6);font-size:11px;letter-spacing:3px;
-    display:flex;flex-direction:column;align-items:center;gap:12px;
-    opacity:0;animation:fadeUp .8s 1.4s forwards;
-  }
-  .hero-scroll-line{
-    width:1px;height:40px;background:rgba(255,255,255,.2);
-    position:relative;overflow:hidden;
-  }
-  .hero-scroll-line::after{
-    content:"";position:absolute;top:-40px;right:0;
-    width:1px;height:40px;background:var(--gold);
-    animation:scrollLine 2s infinite;
-  }
-  @keyframes scrollLine{to{top:40px}}
-
-  /* Sections */
-  section{padding:100px 24px;position:relative;width:100%}
-  .container{max-width:1280px;margin:0 auto;width:100%}
-  .section-head{text-align:center;margin-bottom:60px}
-  .section-tag{
-    display:inline-block;font-size:12px;letter-spacing:3px;
-    color:var(--green);margin-bottom:16px;
-    font-weight:600;
-    padding:6px 16px;border:1px solid var(--green);
-    border-radius:100px;
-  }
-  .section-title{
-    font-size:clamp(32px,5vw,56px);
-    font-weight:300;line-height:1.3;
-    color:var(--dark);letter-spacing:-1px;
-    margin-bottom:16px;
-  }
-  .section-title em{font-style:italic;color:var(--green);font-weight:400}
-  [data-theme="dark"] .section-title em{color:var(--gold)}
-  .section-desc{
-    max-width:600px;margin:0 auto;
-    color:var(--muted);font-size:15px;
-    line-height:1.8;
-  }
-
-  /* Categories - Horizontal Scroll */
-  .categories-wrapper{
-    position:relative;
-    margin-bottom:48px;
-  }
-  .categories-scroll{
     display:flex;
-    gap:12px;
-    overflow-x:auto;
-    scroll-behavior:smooth;
-    padding:8px 0 16px;
-    scrollbar-width:thin;
-    scrollbar-color:var(--green) var(--bg-3);
-  }
-  .categories-scroll::-webkit-scrollbar{
-    height:6px;
-  }
-  .categories-scroll::-webkit-scrollbar-track{
-    background:var(--bg-3);
-    border-radius:10px;
-  }
-  .categories-scroll::-webkit-scrollbar-thumb{
-    background:var(--green);
-    border-radius:10px;
-  }
-  .category-btn{
-    flex-shrink:0;
-    padding:12px 24px;
-    border-radius:100px;
-    background:var(--bg-2);
-    border:1px solid var(--line);
-    font-size:14px;
-    font-weight:400;
-    color:var(--text);
-    transition:all .3s;
-    white-space:nowrap;
-    display:flex;
-    align-items:center;
-    gap:8px;
-  }
-  .category-btn:hover{
-    background:var(--bg-3);
-    border-color:var(--green);
-  }
-  .category-btn.active{
-    background:var(--green);
-    color:#fff;
-    border-color:var(--green);
-  }
-  .category-icon{
-    font-size:18px;
-  }
-
-  /* Filter & Search */
-  .filter-bar{
-    display:flex;
-    gap:12px;
-    margin-bottom:32px;
-    flex-wrap:wrap;
-    align-items:center;
     justify-content:center;
-  }
-  .search-box{
-    flex:1;
-    min-width:280px;
-    max-width:500px;
+    align-items:center;
+    background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
+    color:white;
     position:relative;
-  }
-  .search-box input{
-    width:100%;
-    padding:14px 48px 14px 20px;
-    border-radius:100px;
-    border:1px solid var(--line);
-    background:var(--bg-2);
-    color:var(--text);
-    font-family:inherit;
-    font-size:14px;
-    transition:all .3s;
-  }
-  .search-box input:focus{
-    outline:none;
-    border-color:var(--green);
-    box-shadow:0 0 0 3px rgba(92,122,60,.1);
-  }
-  .search-box svg{
+}
+
+/* پس زمینه */
+
+body::before{
+    content:"";
     position:absolute;
-    right:18px;
-    top:50%;
-    transform:translateY(-50%);
-    width:18px;height:18px;
-    color:var(--muted);
-  }
-  .results-count{
-    font-size:13px;
-    color:var(--muted);
-    text-align:center;
-    margin-bottom:24px;
-  }
-  .results-count strong{
-    color:var(--green);
-    font-weight:600;
-  }
+    inset:0;
+    background:
+    radial-gradient(circle at 20% 20%,rgba(59,130,246,.25),transparent 35%),
+    radial-gradient(circle at 80% 70%,rgba(16,185,129,.2),transparent 35%),
+    radial-gradient(circle at 50% 100%,rgba(168,85,247,.18),transparent 40%);
+    animation:move 12s linear infinite alternate;
+}
 
-  /* Products */
-  .products-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
-    gap:24px;
-    width:100%;
-  }
-  .product{
-    background:var(--bg-2);
-    border-radius:var(--radius);
-    overflow:hidden;
-    box-shadow:var(--shadow);
-    transition:all .4s cubic-bezier(.4,0,.2,1);
-    border:1px solid var(--line);
-    display:flex;
-    flex-direction:column;
-  }
-  .product-img{
-    position:relative;overflow:hidden;
-    aspect-ratio:1/1;
-    background:var(--bg-3);
-  }
-  .product-img img{
-    width:100%;height:100%;object-fit:cover;
-    transition:transform .6s cubic-bezier(.4,0,.2,1);
-  }
-  .product-badge{
-    position:absolute;top:16px;right:16px;
-    background:var(--green);
-    color:#fff;
-    padding:6px 14px;border-radius:100px;
-    font-size:11px;letter-spacing:1px;
-    font-weight:500;
-  }
-  .product-info{
-    padding:24px;
-    text-align:center;
-    flex:1;
-    display:flex;
-    flex-direction:column;
-  }
-  .product-cat{
-    font-size:11px;letter-spacing:2px;color:var(--green);
-    margin-bottom:8px;font-weight:500;
-  }
-  .product-name{
-    font-size:16px;font-weight:500;color:var(--dark);
-    margin-bottom:6px;line-height:1.5;
-  }
-  .product-unit{
-    font-size:12px;color:var(--muted);
-    margin-bottom:14px;
-  }
-  .product-price{
-    display:flex;align-items:center;justify-content:center;gap:8px;
-    flex-wrap:wrap;
-    margin-bottom:18px;
-  }
-  .product-price span{
-    font-size:17px;font-weight:600;color:var(--green);
-  }
-  [data-theme="dark"] .product-price span{color:var(--gold)}
-  .product-price .currency{
-    font-size:11px;color:var(--muted);
-    font-weight:400;
-  }
-  .order-btn{
-    margin-top:auto;
-    background:var(--green);
-    color:#fff;
-    padding:12px 20px;
-    border-radius:100px;
-    font-size:13px;
-    font-weight:500;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
-    transition:all .3s;
-    text-decoration:none;
-  }
-  .order-btn:hover{
-    background:var(--gold);
-    transform:translateY(-2px);
-    box-shadow:0 8px 24px rgba(199,169,107,.3);
-  }
-  .order-btn svg{width:16px;height:16px}
+@keyframes move{
 
-  @media (hover:hover){
-    .product:hover{
-      transform:translateY(-8px);
-      box-shadow:var(--shadow-hover);
+    from{
+        transform:scale(1);
     }
-    .product:hover .product-img img{transform:scale(1.05)}
-  }
 
-  /* Why Us */
-  .why{background:var(--bg-2)}
-  .why-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-    gap:24px;
-    width:100%;
-  }
-  .feature{
-    padding:36px 28px;border-radius:var(--radius);
-    background:var(--bg);
-    border:1px solid var(--line);
-    transition:all .4s;position:relative;overflow:hidden;
-    text-align:center;
-  }
-  .feature::before{
-    content:"";position:absolute;top:0;right:0;
-    width:100%;height:3px;
-    background:linear-gradient(90deg,var(--green),transparent);
-    transform:scaleX(0);transform-origin:right;
-    transition:transform .5s;
-  }
-  .feature-icon{
-    width:56px;height:56px;border-radius:16px;
-    background:linear-gradient(135deg,var(--green),var(--green-dark));
-    display:flex;align-items:center;justify-content:center;
-    margin:0 auto 24px;color:#fff;
-    transition:transform .4s;
-    font-size:24px;
-  }
-  .feature h3{
-    font-size:18px;font-weight:500;color:var(--dark);
-    margin-bottom:12px;
-  }
-  .feature p{color:var(--muted);font-size:14px;line-height:1.8}
-
-  @media (hover:hover){
-    .feature:hover::before{transform:scaleX(1)}
-    .feature:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
-    .feature:hover .feature-icon{transform:rotate(-5deg) scale(1.05)}
-  }
-
-  /* About */
-  .about-grid{
-    display:grid;grid-template-columns:1fr 1fr;
-    gap:60px;align-items:center;
-    width:100%;
-  }
-  .about-img{
-    position:relative;border-radius:var(--radius);overflow:hidden;
-    aspect-ratio:4/5;
-  }
-  .about-img img{width:100%;height:100%;object-fit:cover}
-  .about-img::after{
-    content:"";position:absolute;inset:0;
-    background:linear-gradient(135deg,transparent 60%,rgba(92,122,60,.2));
-  }
-  .about-badge{
-    position:absolute;bottom:24px;right:24px;
-    background:rgba(255,255,255,.95);backdrop-filter:blur(20px);
-    padding:20px 24px;border-radius:16px;
-    text-align:center;
-  }
-  .about-badge strong{
-    display:block;font-size:32px;font-weight:300;
-    color:var(--green);line-height:1;
-  }
-  [data-theme="dark"] .about-badge strong{color:var(--gold)}
-  .about-badge span{font-size:11px;letter-spacing:2px;color:var(--muted);margin-top:4px;display:block}
-  .about-content .section-tag{margin-bottom:16px}
-  .about-content h2{
-    font-size:clamp(28px,4vw,44px);font-weight:300;
-    line-height:1.3;color:var(--dark);margin-bottom:24px;
-    letter-spacing:-.5px;
-    text-align:right;
-  }
-  .about-content h2 em{font-style:italic;color:var(--green);font-weight:400}
-  [data-theme="dark"] .about-content h2 em{color:var(--gold)}
-  .about-content p{
-    color:var(--muted);margin-bottom:20px;font-size:15px;line-height:2;
-    text-align:right;
-  }
-  .about-stats{
-    display:grid;grid-template-columns:repeat(3,1fr);
-    gap:24px;margin-top:36px;padding-top:36px;
-    border-top:1px solid var(--line);
-    text-align:center;
-  }
-  .stat-num{
-    font-size:36px;font-weight:300;color:var(--green);
-    line-height:1;margin-bottom:8px;
-  }
-  [data-theme="dark"] .stat-num{color:var(--gold)}
-  .stat-label{font-size:11px;letter-spacing:2px;color:var(--muted)}
-
-  /* Contact */
-  .contact{
-    background:linear-gradient(135deg,var(--green-dark) 0%,var(--dark) 100%);
-    color:#fff;text-align:center;
-  }
-  .contact .section-title{color:#fff}
-  .contact .section-title em{color:var(--gold)}
-  .contact .section-desc{color:rgba(255,255,255,.7)}
-  .contact-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;max-width:1000px;margin:0 auto;
-    width:100%;
-  }
-  .contact-card{
-    padding:32px 24px;border-radius:var(--radius);
-    background:rgba(255,255,255,.05);
-    backdrop-filter:blur(20px);
-    border:1px solid rgba(255,255,255,.1);
-    transition:all .4s;
-    display:flex;flex-direction:column;align-items:center;gap:16px;
-    text-align:center;
-    text-decoration:none;
-  }
-  .contact-icon{
-    width:52px;height:52px;border-radius:50%;
-    background:linear-gradient(135deg,var(--gold),var(--green));
-    display:flex;align-items:center;justify-content:center;
-    color:var(--dark);
-    flex-shrink:0;
-    font-size:22px;
-  }
-  .contact-card h4{font-size:16px;font-weight:500}
-  .contact-card p{font-size:13px;color:rgba(255,255,255,.6)}
-  .contact-card .handle{
-    font-size:14px;color:var(--gold);font-weight:500;
-    margin-top:4px;letter-spacing:.5px;
-    word-break:break-all;
-    direction:ltr;
-  }
-  .designer{
-    margin-top:60px;padding-top:36px;
-    border-top:1px solid rgba(255,255,255,.1);
-    font-size:13px;color:rgba(255,255,255,.5);
-  }
-  .designer strong{color:var(--gold);font-weight:500}
-
-  @media (hover:hover){
-    .contact-card:hover{
-      background:rgba(255,255,255,.1);
-      border-color:var(--gold);
-      transform:translateY(-6px);
+    to{
+        transform:scale(1.15);
     }
-  }
 
-  /* Footer */
-  footer{
-    background:var(--bg);padding:60px 24px 32px;
-    border-top:1px solid var(--line);
+}
+
+.card{
+
+    position:relative;
+    z-index:2;
+
+    width:min(90%,700px);
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:25px;
+
+    padding:60px 40px;
+
     text-align:center;
-  }
-  .footer-grid{
-    max-width:1280px;margin:0 auto;
-    display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
-    gap:48px;margin-bottom:48px;
-    text-align:right;
-  }
-  .footer-brand .logo{margin-bottom:16px;justify-content:flex-start}
-  .footer-brand p{color:var(--muted);font-size:14px;line-height:1.8}
-  .footer-col h5{
-    font-size:12px;letter-spacing:2px;color:var(--dark);
-    margin-bottom:20px;font-weight:600;
-  }
-  .footer-col a{
-    display:block;color:var(--muted);font-size:14px;
-    margin-bottom:12px;transition:color .3s;
-  }
-  .footer-col a:hover{color:var(--green)}
-  .footer-bottom{
-    max-width:1280px;margin:0 auto;
-    padding-top:32px;border-top:1px solid var(--line);
-    display:flex;justify-content:space-between;align-items:center;
-    flex-wrap:wrap;gap:16px;
-    font-size:13px;color:var(--muted);
-  }
-  .footer-social{display:flex;gap:12px}
-  .footer-social a{
-    width:36px;height:36px;border-radius:50%;
-    background:var(--bg-2);border:1px solid var(--line);
-    display:flex;align-items:center;justify-content:center;
-    transition:all .3s;
-    font-size:16px;
-  }
-  .footer-social a:hover{background:var(--green);color:#fff;border-color:var(--green);transform:translateY(-3px)}
 
-  /* Back to top */
-  .top-btn{
-    position:fixed;bottom:24px;left:24px;
-    width:48px;height:48px;border-radius:50%;
-    background:var(--green);color:#fff;
-    display:flex;align-items:center;justify-content:center;
-    z-index:99;opacity:0;visibility:hidden;
-    transform:translateY(20px);
-    transition:all .4s;box-shadow:var(--shadow);
-  }
-  .top-btn.show{opacity:1;visibility:visible;transform:translateY(0)}
-  .top-btn:hover{background:var(--gold);transform:translateY(-4px)}
-  .top-btn svg{width:18px;height:18px}
+    box-shadow:0 25px 60px rgba(0,0,0,.4);
 
-  /* Reveal */
-  .reveal{opacity:0;transform:translateY(30px);transition:all .8s cubic-bezier(.4,0,.2,1)}
-  .reveal.left{transform:translateX(-30px)}
-  .reveal.right{transform:translateX(30px)}
-  .reveal.in{opacity:1;transform:none}
+    animation:fade .8s ease;
 
-  /* No results */
-  .no-results{
-    text-align:center;
-    padding:48px 20px;
-    color:var(--muted);
-    display:none;
-  }
-  .no-results.show{display:block}
-  .no-results-icon{
-    font-size:56px;
-    margin-bottom:16px;
-    opacity:.5;
-  }
+}
 
-  /* Responsive */
-  @media (max-width:1024px){
-    .about-grid{gap:48px}
-    .footer-grid{gap:32px}
-  }
+@keyframes fade{
 
-  @media (max-width:768px){
-    .nav{
-      top:12px;
-      left:12px;
-      right:12px;
-      width:auto;
-      transform:none;
-      padding:10px 16px;
-      gap:12px;
-    }
-    .nav.scrolled{top:8px;padding:8px 14px}
-    .logo-img{width:36px;height:36px}
-    .logo-text{font-size:15px}
-    .nav-links{display:none}
-    .menu-btn{display:flex}
-    .theme-toggle,
-    .menu-btn{width:36px;height:36px}
-    .theme-toggle svg{width:16px;height:16px}
+from{
 
-    .hero{padding:100px 16px 60px;min-height:auto}
-    .hero-bg{transform:scale(1)}
-    .hero h1{font-size:clamp(28px,7vw,44px);letter-spacing:-.5px}
-    .hero-sub{font-size:14px;margin-bottom:32px}
-    .hero-btns{flex-direction:column;width:100%;align-items:center;gap:12px}
-    .btn{width:100%;max-width:280px;justify-content:center;padding:14px 28px;font-size:13px}
-    .hero-scroll{display:none}
+opacity:0;
+transform:translateY(40px);
 
-    section{padding:60px 16px}
-    .section-head{margin-bottom:40px}
-    .section-title{font-size:clamp(26px,6vw,36px)}
-    .section-tag{font-size:11px;letter-spacing:2px;padding:5px 14px}
-    .section-desc{font-size:14px}
+}
 
-    .categories-scroll{gap:10px}
-    .category-btn{padding:10px 20px;font-size:13px}
-    .category-icon{font-size:16px}
+to{
 
-    .products-grid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px}
-    .product-info{padding:20px}
-    .product-name{font-size:15px}
-    .product-price span{font-size:16px}
+opacity:1;
+transform:translateY(0);
 
-    .why-grid{grid-template-columns:1fr;gap:16px}
-    .feature{padding:28px 20px}
-    .feature h3{font-size:17px}
+}
 
-    .about-grid{grid-template-columns:1fr;gap:32px}
-    .about-content h2,
-    .about-content p{text-align:center}
-    .about-stats{grid-template-columns:1fr;gap:16px}
-    .stat-num{font-size:28px}
+}
 
-    .contact-grid{grid-template-columns:1fr;gap:16px}
-    .contact-card{padding:28px 20px}
-    .contact-card .handle{font-size:13px}
+.icon{
 
-    .footer-grid{grid-template-columns:1fr;gap:28px;text-align:center}
-    .footer-brand .logo{justify-content:center}
-    .footer-bottom{flex-direction:column;justify-content:center;text-align:center}
+font-size:90px;
+margin-bottom:20px;
+animation:pulse 2s infinite;
 
-    .top-btn{bottom:20px;left:20px;width:44px;height:44px}
-  }
+}
 
-  @media (max-width:480px){
-    .hero h1{font-size:28px}
-    .section-title{font-size:24px}
-    .nav{left:8px;right:8px;padding:8px 12px}
-    .logo-text{font-size:14px}
-    .products-grid{grid-template-columns:1fr}
-  }
+@keyframes pulse{
 
-  @media (max-width:360px){
-    .hero h1{font-size:26px}
-    .section-title{font-size:22px}
-    .btn{padding:12px 20px;font-size:12px}
-  }
+0%,100%{transform:scale(1);}
+50%{transform:scale(1.08);}
+
+}
+
+h1{
+
+font-size:34px;
+margin-bottom:20px;
+
+}
+
+p{
+
+font-size:18px;
+line-height:2;
+opacity:.9;
+
+}
+
+.line{
+
+width:90px;
+height:4px;
+margin:30px auto;
+border-radius:10px;
+background:linear-gradient(to left,#22c55e,#3b82f6);
+
+}
+
+.footer{
+
+margin-top:35px;
+font-size:14px;
+opacity:.7;
+
+}
+
 </style>
+
 </head>
+
 <body>
 
-<!-- Progress -->
-<div class="progress" id="progress"></div>
+<div class="card">
 
-<!-- Navbar -->
-<nav class="nav" id="nav">
-  <div class="logo">
-    <img src="logo.jpg" alt="دهکده سلامت" class="logo-img">
-    <span class="logo-text">دهکده سلامت</span>
-  </div>
-  <div class="nav-links">
-    <a href="#products">محصولات</a>
-    <a href="#why">چرا ما</a>
-    <a href="#about">درباره ما</a>
-    <a href="#contact">تماس</a>
-  </div>
-  <div class="nav-actions">
-    <button class="theme-toggle" id="themeToggle" aria-label="تغییر تم">
-      <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-    </button>
-    <button class="menu-btn" id="menuBtn" aria-label="منو"><span></span></button>
-  </div>
-</nav>
+<div class="icon">🚫</div>
 
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#products">محصولات</a>
-  <a href="#why">چرا ما</a>
-  <a href="#about">درباره ما</a>
-  <a href="#contact">تماس</a>
+<h1>این صفحه دیگر در دسترس نیست</h1>
+
+<div class="line"></div>
+
+<p>
+صفحه‌ای که به دنبال آن هستید حذف شده،
+منتقل شده یا دیگر قابل دسترسی نیست.
+<br><br>
+در صورت نیاز، لطفاً با مدیر سایت یا پشتیبانی تماس بگیرید.
+</p>
+
+<div class="footer">
+© تمامی حقوق محفوظ است.
 </div>
 
-<!-- Hero -->
-<header class="hero">
-  <div class="hero-bg" id="heroBg"></div>
-  <div class="hero-content">
-    <div class="hero-tag">محصولات ارگانیک و سنتی ایرانی</div>
-    <h1>
-      <span class="word">طعم</span>
-      <span class="word">اصالت</span>
-      <span class="word">در</span>
-      <span class="word">دهکده سلامت</span>
-    </h1>
-    <p class="hero-sub">بیش از ۸۵ محصول ارگانیک، طبیعی و سنتی از بهترین تولیدکنندگان ایرانی. از عسل طبیعی تا زعفران مرغوب، همه با ضمانت اصالت و کیفیت.</p>
-    <div class="hero-btns">
-      <a href="#products" class="btn btn-primary">
-        مشاهده محصولات
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-      </a>
-      <a href="#contact" class="btn btn-ghost">
-        ارتباط با ما
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
-    </div>
-  </div>
-  <div class="hero-scroll">
-    <span>SCROLL</span>
-    <div class="hero-scroll-line"></div>
-  </div>
-</header>
+</div>
 
-<!-- Products -->
-<section id="products">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="section-tag">فروشگاه</span>
-      <h2 class="section-title">محصولات <em>ویژه</em></h2>
-      <p class="section-desc">برای سفارش هر محصول، روی دکمه سفارش در ایتا کلیک کنید</p>
-    </div>
-    
-    <!-- Categories - Horizontal Scroll -->
-    <div class="categories-wrapper reveal">
-      <div class="categories-scroll" id="categoriesScroll"></div>
-    </div>
-    
-    <div class="filter-bar reveal">
-      <div class="search-box">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-        <input type="text" id="searchInput" placeholder="جستجوی محصول...">
-      </div>
-    </div>
-    
-    <div class="results-count" id="resultsCount">
-      نمایش <strong>۸۵</strong> محصول
-    </div>
-
-    <div class="products-grid" id="productsGrid"></div>
-    
-    <div class="no-results" id="noResults">
-      <div class="no-results-icon">🔍</div>
-      <h3>محصولی یافت نشد</h3>
-      <p>لطفاً عبارت دیگری را جستجو کنید</p>
-    </div>
-  </div>
-</section>
-
-<!-- Why Us -->
-<section class="why" id="why">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="section-tag">تمایز ما</span>
-      <h2 class="section-title">چرا <em>دهکده سلامت</em>؟</h2>
-      <p class="section-desc">چهار دلیلی که ما را از دیگران متمایز می‌کند</p>
-    </div>
-    <div class="why-grid">
-      <div class="feature reveal">
-        <div class="feature-icon">🌿</div>
-        <h3>۱۰۰٪ طبیعی و ارگانیک</h3>
-        <p>تمامی محصولات ما بدون مواد افزودنی شیمیایی و با رعایت استانداردهای ارگانیک تولید می‌شوند.</p>
-      </div>
-      <div class="feature reveal">
-        <div class="feature-icon">🏆</div>
-        <h3>ضمانت اصالت کالا</h3>
-        <p>ما به کیفیت محصولات خود ایمان داریم و اصالت تمامی کالاها را تضمین می‌کنیم.</p>
-      </div>
-      <div class="feature reveal">
-        <div class="feature-icon">🚚</div>
-        <h3>ارسال به سراسر کشور</h3>
-        <p>محصولات با بسته‌بندی مناسب و در سریع‌ترین زمان ممکن به دست شما می‌رسد.</p>
-      </div>
-      <div class="feature reveal">
-        <div class="feature-icon">💬</div>
-        <h3>پشتیبانی ۲۴ ساعته</h3>
-        <p>تیم پشتیبانی ما در ایتا و واتساپ آماده پاسخگویی به سوالات شما در هر ساعت از شبانه‌روز است.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- About -->
-<section id="about">
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-img reveal left">
-        <img src="logo2.png" alt="درباره دهکده سلامت" loading="lazy">
-        <div class="about-badge">
-          <strong>+۱۰</strong>
-          <span>سال تجربه</span>
-        </div>
-      </div>
-      <div class="about-content reveal right">
-        <span class="section-tag">داستان ما</span>
-        <h2>از <em>طبیعت</em> تا <em>سفره شما</em></h2>
-        <p>دهکده سلامت با هدف ارائه محصولات ارگانیک، طبیعی و سنتی ایرانی فعالیت می‌کند. ما باور داریم که سلامتی از تغذیه سالم آغاز می‌شود و بهترین محصولات را از دل طبیعت ایران برای شما به ارمغان می‌آوریم.</p>
-        <p>تمامی محصولات ما از تولیدکنندگان معتبر و با کیفیت برتر انتخاب می‌شوند. از عسل طبیعی کوهستان تا زعفران مرغوب قائنات، همه با دقت و وسواس خاصی گزینش شده‌اند.</p>
-        <div class="about-stats">
-          <div>
-            <div class="stat-num">+۸۵</div>
-            <div class="stat-label">محصول متنوع</div>
-          </div>
-          <div>
-            <div class="stat-num">+۱۵</div>
-            <div class="stat-label">دسته‌بندی</div>
-          </div>
-          <div>
-            <div class="stat-num">۱۰۰٪</div>
-            <div class="stat-label">ارگانیک</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Contact -->
-<section class="contact" id="contact">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="section-tag">در ارتباط باشیم</span>
-      <h2 class="section-title">با ما <em>تماس</em> بگیرید</h2>
-      <p class="section-desc">ما در پلتفرم‌های مختلف در دسترس شما هستیم</p>
-    </div>
-    <div class="contact-grid">
-      <a href="https://eitaa.com/Fssadat" target="_blank" class="contact-card reveal">
-        <div class="contact-icon">📱</div>
-        <h4>ادمین ایتا</h4>
-        <p>پشتیبانی و سفارش</p>
-        <div class="handle">@Fssadat</div>
-      </a>
-      <a href="https://eitaa.com/dehkadeh_salamat123" target="_blank" class="contact-card reveal">
-        <div class="contact-icon">📢</div>
-        <h4>کانال ایتا</h4>
-        <p>محصولات جدید و تخفیف‌ها</p>
-        <div class="handle">@dehkadeh_salamat123</div>
-      </a>
-      <a href="tel:09127954403" class="contact-card reveal">
-        <div class="contact-icon">📞</div>
-        <h4>تماس تلفنی</h4>
-        <p>پاسخگویی سریع</p>
-        <div class="handle">۰۹۱۲۷۹۵۴۴۰۳</div>
-      </a>
-      <a href="tel:09194960826" class="contact-card reveal">
-        <div class="contact-icon">📞</div>
-        <h4>تماس تلفنی</h4>
-        <p>پاسخگویی سریع</p>
-        <div class="handle">۰۹۱۹۴۹۶۰۸۲۶</div>
-      </a>
-      <a href="https://chat.whatsapp.com/LMwOZfhAt6p7XgAZHzYq2" target="_blank" class="contact-card reveal">
-        <div class="contact-icon">💬</div>
-        <h4>گروه واتساپ</h4>
-        <p>عضویت در گروه</p>
-        <div class="handle">WhatsApp Group</div>
-      </a>
-    </div>
-    <div class="designer reveal">
-      طراحی شده با <strong>♥</strong> توسط <strong>دهکده سلامت</strong>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <div class="logo">
-        <img src="logo.jpg" alt="دهکده سلامت" class="logo-img">
-        <span class="logo-text">دهکده سلامت</span>
-      </div>
-      <p>فروشگاه محصولات ارگانیک، طبیعی و سنتی ایرانی با بیش از یک دهه تجربه در ارائه بهترین محصولات به شما.</p>
-    </div>
-    <div class="footer-col">
-      <h5>دسته‌بندی‌ها</h5>
-      <a href="#products">عسل طبیعی</a>
-      <a href="#products">زعفران</a>
-      <a href="#products">خشکبار</a>
-      <a href="#products">عرقیات گیاهی</a>
-    </div>
-    <div class="footer-col">
-      <h5>لینک‌های مفید</h5>
-      <a href="#about">درباره ما</a>
-      <a href="#why">چرا ما</a>
-      <a href="#contact">تماس با ما</a>
-      <a href="#products">محصولات</a>
-    </div>
-    <div class="footer-col">
-      <h5>پشتیبانی</h5>
-      <a href="https://eitaa.com/Fssadat">ادمین ایتا</a>
-      <a href="tel:09127954403">تماس تلفنی</a>
-      <a href="https://chat.whatsapp.com/LMwOZfhAt6p7XgAZHzYq2">گروه واتساپ</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <div>© ۱۴۰۵ دهکده سلامت · تمامی حقوق محفوظ است</div>
-    <div class="footer-social">
-      <a href="https://eitaa.com/Fssadat" target="_blank" aria-label="ایتا">📱</a>
-      <a href="https://eitaa.com/dehkadeh_salamat123" target="_blank" aria-label="کانال ایتا">📢</a>
-      <a href="https://chat.whatsapp.com/LMwOZfhAt6p7XgAZHzYq2" target="_blank" aria-label="واتساپ">💬</a>
-    </div>
-  </div>
-</footer>
-
-<!-- Back to top -->
-<button class="top-btn" id="topBtn" aria-label="بازگشت به بالا">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
-</button>
-
-<script>
-  // Products Data
-  const productsData = [
-    { name: 'رب انار', price: 500000, unit: 'کیلویی', category: 'رب و فرآورده‌های غذایی', badge: 'ویژه' },
-    { name: 'رب گوجه', price: 390000, unit: 'وزن ۲ کیلو و ۳۰۰ گرم', category: 'رب و فرآورده‌های غذایی' },
-    { name: 'ارده کنجد ایرانی', price: 369000, unit: 'نیم کیلو', category: 'ارده و حلوا' },
-    { name: 'ارده کنجد ایرانی', price: 580000, unit: '۸۰۰ گرم', category: 'ارده و حلوا' },
-    { name: 'عسل گون', price: 850000, unit: '', category: 'عسل', badge: 'پرفروش' },
-    { name: 'عسل آویشن', price: 610000, unit: '', category: 'عسل' },
-    { name: 'عسل هفت گیاه', price: 650000, unit: '', category: 'عسل' },
-    { name: 'حلوا ارده اردکان یزد', price: 300000, unit: '', category: 'ارده و حلوا', badge: 'سنتی' },
-    { name: 'حلوا پشمکی تبریز', price: 210000, unit: '', category: 'ارده و حلوا' },
-    { name: 'خرما', price: 260000, unit: '', category: 'خشکبار' },
-    { name: 'تخمه کدو ایرانی', price: 930000, unit: '', category: 'خشکبار' },
-    { name: 'تخمه آفتابگردان پوست نازک دور سفید', price: 500000, unit: '', category: 'خشکبار' },
-    { name: 'پسته', price: 1950000, unit: '', category: 'خشکبار', badge: 'لوکس' },
-    { name: 'بادام زمینی', price: 590000, unit: '', category: 'خشکبار' },
-    { name: 'گردوی ایرانی امساله', price: 880000, unit: '', category: 'خشکبار', badge: 'جدید' },
-    { name: 'گردو', price: 990000, unit: '', category: 'خشکبار' },
-    { name: 'گردوی سفید ایرانی درجه یک', price: 1400000, unit: 'کیلویی', category: 'خشکبار', badge: 'ویژه' },
-    { name: 'سوهان سمنو', price: 180000, unit: '', category: 'سایر محصولات' },
-    { name: 'کشک رومیزی', price: 150000, unit: '', category: 'لبنیات سنتی' },
-    { name: 'کشک قره‌قروت', price: 150000, unit: '', category: 'لبنیات سنتی' },
-    { name: 'کره گاوی', price: 930000, unit: 'کیلویی', category: 'لبنیات سنتی' },
-    { name: 'روغن زرد گاوی', price: 1350000, unit: 'کیلویی', category: 'روغن‌ها', badge: 'ویژه' },
-    { name: 'روغن زیتون خالص', price: 920000, unit: '', category: 'روغن‌ها' },
-    { name: 'گلاب دوآتیشه سنتی', price: 400000, unit: '', category: 'عرقیات گیاهی', badge: 'سنتی' },
-    { name: 'گلاب معمولی سنتی', price: 250000, unit: '', category: 'عرقیات گیاهی' },
-    { name: 'عرق نعنا', price: 200000, unit: '', category: 'عرقیات گیاهی' },
-    { name: 'عرق کاسنی', price: 150000, unit: '', category: 'عرقیات گیاهی' },
-    { name: 'عرق شاتره', price: 150000, unit: '', category: 'عرقیات گیاهی' },
-    { name: 'عرق بیدمشک', price: 220000, unit: '', category: 'عرقیات گیاهی' },
-    { name: 'عرق بهارنارنج', price: 220000, unit: '', category: 'عرقیات گیاهی' },
-    { name: 'عصاره زعفران', price: 130000, unit: '', category: 'زعفران و ادویه' },
-    { name: 'هل دوآتیشه', price: 410000, unit: '', category: 'زعفران و ادویه' },
-    { name: 'سرکه سیب', price: 190000, unit: 'یک و نیم لیتری', category: 'شربت‌ها' },
-    { name: 'سرکه انگور خانگی', price: 180000, unit: '', category: 'شربت‌ها' },
-    { name: 'شربت سرکه انگبین با عسل', price: 680000, unit: '', category: 'شربت‌ها', badge: 'ویژه' },
-    { name: 'زعفران مجتهدی', price: 1100000, unit: 'یک مثقال و چهار سوت', category: 'زعفران و ادویه', badge: 'لوکس' },
-    { name: 'زعفران نگین طلا', price: 1200000, unit: '', category: 'زعفران و ادویه', badge: 'ویژه' },
-    { name: 'زعفران مجتهدی ریز', price: 1000000, unit: '', category: 'زعفران و ادویه' },
-    { name: 'نمک جهرم', price: 180000, unit: '۲ کیلو', category: 'زعفران و ادویه' },
-    { name: 'شکر قهوه‌ای', price: 220000, unit: '۱.۵ کیلو', category: 'سایر محصولات' },
-    { name: 'نوره زرنیخ‌دار', price: 140000, unit: '۱ کیلو', category: 'محصولات آرایشی و بهداشتی' },
-    { name: 'نوره آرایشی صورت', price: 80000, unit: '', category: 'محصولات آرایشی و بهداشتی' },
-    { name: 'لوسیون نوره', price: 140000, unit: '', category: 'محصولات آرایشی و بهداشتی' },
-    { name: 'کرم جامع چهل گیاه', price: 140000, unit: '', category: 'محصولات آرایشی و بهداشتی' },
-    { name: 'حنا', price: 240000, unit: '', category: 'محصولات آرایشی و بهداشتی' },
-    { name: 'سوهان کف پا', price: 130000, unit: '', category: 'محصولات آرایشی و بهداشتی' },
-    { name: 'شکلات کره‌ای', price: 580000, unit: '', category: 'سایر محصولات' },
-    { name: 'زرشک پفکی بدون روغن', price: 300000, unit: '', category: 'سایر محصولات' },
-    { name: 'روغن سیاهدانه', price: 145000, unit: '', category: 'روغن‌ها' },
-    { name: 'ضماد درد', price: 350000, unit: '', category: 'محصولات گیاهی' },
-    { name: 'روغن گل سرخ', price: 130000, unit: '', category: 'روغن‌ها' },
-    { name: 'روغن بادام تلخ', price: 140000, unit: '', category: 'روغن‌ها' },
-    { name: 'روغن بادام شیرین', price: 150000, unit: '', category: 'روغن‌ها' },
-    { name: 'تقویت ابرو', price: 140000, unit: '', category: 'محصولات آرایشی و بهداشتی' },
-    { name: 'مام گیاهی', price: 140000, unit: '', category: 'محصولات آرایشی و بهداشتی' },
-    { name: 'صابون زیتون', price: 120000, unit: '', category: 'صابون‌ها' },
-    { name: 'صابون تریاک', price: 220000, unit: '', category: 'صابون‌ها' },
-    { name: 'صابون شیر الاغ', price: 130000, unit: '', category: 'صابون‌ها', badge: 'ویژه' },
-    { name: 'صابون زردچوبه', price: 120000, unit: '', category: 'صابون‌ها' },
-    { name: 'خلال بادام', price: 85000, unit: '', category: 'سایر محصولات' },
-    { name: 'خلال پسته', price: 90000, unit: '', category: 'سایر محصولات' },
-    { name: 'هل', price: 140000, unit: '', category: 'زعفران و ادویه' },
-    { name: 'شامپو سبغ مخصوص ریزش مو', price: 150000, unit: '', category: 'محصولات آرایشی و بهداشتی' },
-    { name: 'آب زرشک طبیعی', price: 400000, unit: '', category: 'شربت‌ها' },
-    { name: 'مویز', price: 315000, unit: '', category: 'خشکبار' },
-    { name: 'نخودچی', price: 450000, unit: '', category: 'خشکبار' },
-    { name: 'نبات بسته‌ای', price: 220000, unit: '', category: 'سایر محصولات' },
-    { name: 'کشمش سبز', price: 630000, unit: '', category: 'خشکبار' },
-    { name: 'کشمش پلویی', price: 660000, unit: '', category: 'خشکبار' },
-    { name: 'انجیر', price: 1800000, unit: '', category: 'خشکبار', badge: 'لوکس' },
-    { name: 'رشته آش و رشته پلویی خانگی', price: 100000, unit: '', category: 'غلات و فرآورده‌های آردی' },
-    { name: 'چای ماسالا', price: 150000, unit: '', category: 'دمنوش و نوشیدنی‌ها' },
-    { name: 'شیره انگور خالص', price: 500000, unit: 'کیلویی', category: 'شربت‌ها' },
-    { name: 'چهارشیره (انگور، خرما، سیب و به)', price: 410000, unit: '', category: 'شربت‌ها', badge: 'ویژه' },
-    { name: 'شوید خشک', price: 150000, unit: '۳۰۰ گرمی', category: 'سایر محصولات' },
-    { name: 'نعناع خشک', price: 150000, unit: '۳۰۰ گرمی', category: 'سایر محصولات' },
-    { name: 'آرد برنج هاشمی', price: 430000, unit: 'نیم کیلو', category: 'غلات و فرآورده‌های آردی' },
-    { name: 'خاکشیر تمیز', price: 200000, unit: 'نیم کیلو', category: 'محصولات گیاهی' },
-    { name: 'شربت زعفران غلیظ', price: 420000, unit: '', category: 'شربت‌ها' },
-    { name: 'شربت سکنجبین غلیظ', price: 360000, unit: '', category: 'شربت‌ها' },
-    { name: 'شربت سرکه انگبین', price: 680000, unit: '', category: 'شربت‌ها' },
-    { name: 'تخم شربتی تمیز', price: 250000, unit: 'نیم کیلو', category: 'محصولات گیاهی' }
-  ];
-
-  // Categories
-  const categories = [
-    { name: 'همه', icon: '📦' },
-    { name: 'رب و فرآورده‌های غذایی', icon: '🫙' },
-    { name: 'عسل', icon: '🍯' },
-    { name: 'ارده و حلوا', icon: '🥜' },
-    { name: 'خشکبار', icon: '🌰' },
-    { name: 'روغن‌ها', icon: '🫒' },
-    { name: 'لبنیات سنتی', icon: '🥛' },
-    { name: 'عرقیات گیاهی', icon: '🌸' },
-    { name: 'شربت‌ها', icon: '🥤' },
-    { name: 'زعفران و ادویه', icon: '🌺' },
-    { name: 'محصولات گیاهی', icon: '🌿' },
-    { name: 'محصولات آرایشی و بهداشتی', icon: '💆' },
-    { name: 'صابون‌ها', icon: '🧼' },
-    { name: 'دمنوش و نوشیدنی‌ها', icon: '☕' },
-    { name: 'غلات و فرآورده‌های آردی', icon: '🌾' },
-    { name: 'سایر محصولات', icon: '📦' }
-  ];
-
-  // Format price to Persian
-  function formatPrice(price) {
-    return price.toLocaleString('fa-IR');
-  }
-
-  // Render categories
-  function renderCategories() {
-    const scroll = document.getElementById('categoriesScroll');
-    scroll.innerHTML = categories.map((cat, index) => `
-      <button class="category-btn ${index === 0 ? 'active' : ''}" data-category="${cat.name}">
-        <span class="category-icon">${cat.icon}</span>
-        <span>${cat.name}</span>
-      </button>
-    `).join('');
-  }
-
-  // Render products
-  function renderProducts(products) {
-    const grid = document.getElementById('productsGrid');
-    const noResults = document.getElementById('noResults');
-    const resultsCount = document.getElementById('resultsCount');
-    
-    if (products.length === 0) {
-      grid.style.display = 'none';
-      noResults.classList.add('show');
-      resultsCount.innerHTML = 'هیچ محصولی یافت نشد';
-      return;
-    }
-    
-    grid.style.display = 'grid';
-    noResults.classList.remove('show');
-    resultsCount.innerHTML = `نمایش <strong>${products.length.toLocaleString('fa-IR')}</strong> محصول`;
-    
-    grid.innerHTML = products.map(product => {
-      const badge = product.badge ? `<span class="product-badge">${product.badge}</span>` : '';
-      const unit = product.unit ? `<div class="product-unit">${product.unit}</div>` : '';
-      
-      return `
-        <article class="product reveal in">
-          <div class="product-img">
-            <img src="logo.jpg" alt="${product.name}" loading="lazy">
-            ${badge}
-          </div>
-          <div class="product-info">
-            <div class="product-cat">${product.category}</div>
-            <h3 class="product-name">${product.name}</h3>
-            ${unit}
-            <div class="product-price">
-              <span>${formatPrice(product.price)}</span>
-              <span class="currency">تومان</span>
-            </div>
-            <a href="https://eitaa.com/Fssadat" target="_blank" class="order-btn">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
-              سفارش در ایتا
-            </a>
-          </div>
-        </article>
-      `;
-    }).join('');
-  }
-
-  // Filter and search
-  let currentCategory = 'همه';
-  let searchTerm = '';
-
-  function filterProducts() {
-    let filtered = productsData;
-    
-    if (currentCategory !== 'همه') {
-      filtered = filtered.filter(p => p.category === currentCategory);
-    }
-    
-    if (searchTerm) {
-      const term = searchTerm.toLowerCase();
-      filtered = filtered.filter(p => 
-        p.name.toLowerCase().includes(term) || 
-        p.category.toLowerCase().includes(term)
-      );
-    }
-    
-    renderProducts(filtered);
-  }
-
-  // Category click
-  document.addEventListener('click', (e) => {
-    const btn = e.target.closest('.category-btn');
-    if (btn) {
-      currentCategory = btn.dataset.category;
-      document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      filterProducts();
-    }
-  });
-
-  // Search
-  document.getElementById('searchInput').addEventListener('input', (e) => {
-    searchTerm = e.target.value;
-    filterProducts();
-  });
-
-  // Theme toggle
-  const themeToggle = document.getElementById('themeToggle');
-  const themeIcon = document.getElementById('themeIcon');
-  const sunIcon = '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>';
-  const moonIcon = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'dark') {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    themeIcon.innerHTML = moonIcon;
-  }
-  themeToggle.addEventListener('click', () => {
-    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-    if (isDark) {
-      document.documentElement.removeAttribute('data-theme');
-      themeIcon.innerHTML = sunIcon;
-      localStorage.setItem('theme', 'light');
-    } else {
-      document.documentElement.setAttribute('data-theme', 'dark');
-      themeIcon.innerHTML = moonIcon;
-      localStorage.setItem('theme', 'dark');
-    }
-  });
-
-  // Scroll progress + nav + back to top
-  const progress = document.getElementById('progress');
-  const nav = document.getElementById('nav');
-  const topBtn = document.getElementById('topBtn');
-  const heroBg = document.getElementById('heroBg');
-  const checkMobile = () => window.innerWidth <= 768;
-  
-  let ticking = false;
-  window.addEventListener('scroll', () => {
-    if (!ticking) {
-      requestAnimationFrame(() => {
-        const h = document.documentElement;
-        const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
-        progress.style.width = scrolled + '%';
-        if (h.scrollTop > 50) nav.classList.add('scrolled'); else nav.classList.remove('scrolled');
-        if (h.scrollTop > 500) topBtn.classList.add('show'); else topBtn.classList.remove('show');
-        
-        if (!checkMobile() && h.scrollTop < window.innerHeight) {
-          heroBg.style.transform = `scale(1.15) translateY(${h.scrollTop * 0.3}px)`;
-        }
-        ticking = false;
-      });
-      ticking = true;
-    }
-  });
-  topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-  // Reveal on scroll
-  const reveals = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('in');
-        io.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-  reveals.forEach(r => io.observe(r));
-
-  // Ripple effect
-  document.querySelectorAll('.btn').forEach(btn => {
-    btn.addEventListener('click', function(e) {
-      const r = document.createElement('span');
-      r.classList.add('ripple');
-      const rect = this.getBoundingClientRect();
-      const size = Math.max(rect.width, rect.height);
-      r.style.width = r.style.height = size + 'px';
-      r.style.left = (e.clientX - rect.left - size / 2) + 'px';
-      r.style.top = (e.clientY - rect.top - size / 2) + 'px';
-      this.appendChild(r);
-      setTimeout(() => r.remove(), 600);
-    });
-  });
-
-  // Mobile menu
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  let menuOpen = false;
-  
-  menuBtn.addEventListener('click', () => {
-    menuOpen = !menuOpen;
-    if (menuOpen) {
-      mobileMenu.classList.add('active');
-      document.body.classList.add('menu-open');
-    } else {
-      mobileMenu.classList.remove('active');
-      document.body.classList.remove('menu-open');
-    }
-  });
-  
-  mobileMenu.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      menuOpen = false;
-      mobileMenu.classList.remove('active');
-      document.body.classList.remove('menu-open');
-    });
-  });
-  
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 768 && menuOpen) {
-      menuOpen = false;
-      mobileMenu.classList.remove('active');
-      document.body.classList.remove('menu-open');
-    }
-  });
-
-  // Initialize
-  renderCategories();
-  renderProducts(productsData);
-</script>
 </body>
 </html>
-
